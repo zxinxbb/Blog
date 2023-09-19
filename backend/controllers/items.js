@@ -8,7 +8,7 @@ const getBlogs = async (req, res) => {
     // respond with an object that has a message and the items from the DB
     res.json({
         message: "all items",
-        todos: items
+        blogs: items
     })
 }
 
@@ -23,14 +23,16 @@ const getBlog = async (req, res) => {
 
 const createBlog = async (req, res) => {
     // get the text from the req.body
-    const { text } = req.body
+    const { text, date, image } = req.body
     console.log(text)
     // create new todo object with model
-const todoObj = new Blog({
+const blogObj = new Blog({
     text,
+    date,
+    image
 })
     // await for it to be saved
-    const newBlog = await todoObj.save()
+    const newBlog = await blogObj.save()
     // respond with json()
     res.status(200).json(newBlog)
 }
