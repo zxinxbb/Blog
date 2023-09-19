@@ -1,5 +1,3 @@
-
-
 const mongoose = require('mongoose')
 
  
@@ -41,4 +39,5 @@ const blogSchema = new Schema({
  
 
 module.exports = mongoose.model('blog', blogSchema)
+
 
