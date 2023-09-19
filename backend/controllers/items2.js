@@ -8,7 +8,7 @@ const getUsers = async (req, res) => {
     // respond with an object that has a message and the items from the DB
     res.json({
         message: "all items",
-        blogs: items
+        users: items
     })
 }
 
@@ -57,9 +57,11 @@ const deleteUser = async (req, res) => {
 }
 
 module.exports = {
+
     createUser,
     getUsers,
     editUser,
     deleteUser,
     getUser
 }
+
