@@ -41,7 +41,7 @@ const editBlog = async (req, res) => {
     // get id from ':id' param from the route
     const { id } = req.params
     // use mongoose model method findByIdAndUpdate
-    let blog = await Blog.findByIdAndUpdate(id, { text: req.body.text })
+    let blog = await Blog.findByIdAndUpdate(id, { text: req.body.text, image: req.body.image })
 
     res.status(200).json(blog)
 }
@@ -62,5 +62,4 @@ module.exports = {
     editBlog,
     deleteBlog,
     getBlog
-    
 }
