@@ -1,6 +1,6 @@
 // handler functions that will be executed 
 
-const Todo = require("../models/blog")
+const Blog = require("../models/blog")
 
 const getBlogs = async (req, res) => {
     // find all items from a mongoose Model method 
