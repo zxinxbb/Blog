@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router() // create a router
-const itemsController = require('../controllers/items')
+const itemsController = require('../controllers/items2')
 
 // routes to controllers
 // the '/items' route will run the getTodos controller

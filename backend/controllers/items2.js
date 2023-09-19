@@ -24,7 +24,6 @@ const getUser = async (req, res) => {
 const createUser = async (req, res) => {
     // get the text from the req.body
     const { username, password, email } = req.body
-    console.log(text)
     // create new todo object with model
 const userObj = new User({
     username,
@@ -41,7 +40,7 @@ const editUser = async (req, res) => {
     // get id from ':id' param from the route
     const { id } = req.params
     // use mongoose model method findByIdAndUpdate
-    let user = await User.findByIdAndUpdate(id, { text: req.body.text })
+    let user = await User.findByIdAndUpdate(id, { username: req.body.username,password: req.body.password, email: req.body.email})
 
     res.status(200).json(user)
 }
