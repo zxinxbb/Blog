@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json()) // parse incomming data
 // routes for requests will always now have '/todos'
 // eg http://localhost:4000/todos/items
-app.use('/todos', itemRoutes)
+app.use('/blogs', itemRoutes)
 
 
 mongoose.connect(process.env.MONGODB_URL)
