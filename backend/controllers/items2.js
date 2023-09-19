@@ -1,10 +1,10 @@
 // handler functions that will be executed 
 
-const Blog = require("../models/blog")
+const User = require("../models/users")
 
-const getBlogs = async (req, res) => {
+const getUsers = async (req, res) => {
     // find all items from a mongoose Model method 
-    const items = await Blog.find({})
+    const items = await User.find({})
     // respond with an object that has a message and the items from the DB
     res.json({
         message: "all items",
@@ -12,54 +12,54 @@ const getBlogs = async (req, res) => {
     })
 }
 
-const getBlog = async (req, res) => {
+const getUser = async (req, res) => {
     // get id from ':id' param from the route (the :id in the route path)
     const { id } = req.params
     // find todo with Model.findById()
-    const blog = await Blog.findById(id)
+    const user = await User.findById(id)
     // response (res) with .json with the todo found
-    res.status(200).json(blog)
+    res.status(200).json(user)
 }
 
-const createBlog = async (req, res) => {
+const createUser = async (req, res) => {
     // get the text from the req.body
-    const { text, date, image } = req.body
+    const { username, password, email } = req.body
     console.log(text)
     // create new todo object with model
-const blogObj = new Blog({
-    text,
-    date,
-    image
+const userObj = new User({
+    username,
+    password,
+    email
 })
     // await for it to be saved
-    const newBlog = await blogObj.save()
+    const newUser = await userObj.save()
     // respond with json()
-    res.status(200).json(newBlog)
+    res.status(200).json(newUser)
 }
 
-const editBlog = async (req, res) => {
+const editUser = async (req, res) => {
     // get id from ':id' param from the route
     const { id } = req.params
     // use mongoose model method findByIdAndUpdate
-    let blog = await Blog.findByIdAndUpdate(id, { text: req.body.text })
+    let user = await User.findByIdAndUpdate(id, { text: req.body.text })
 
-    res.status(200).json(blog)
+    res.status(200).json(user)
 }
 
-const deleteBlog = async (req, res) => {
+const deleteUser = async (req, res) => {
     // get id from ':id' param from the route
     const { id } = req.params
     // use mongoose model method findByIdAndDelete
-   let blog = await Blog.findByIdAndDelete(id)
+   let user = await User.findByIdAndDelete(id)
 
-    res.status(200).json(blog)
+    res.status(200).json(user)
    
 }
 
 module.exports = {
-    createBlog,
-    getBlogs,
-    editBlog,
-    deleteBlog,
-    getBlog
+    createUser,
+    getUsers,
+    editUser,
+    deleteUser,
+    getUser
 }
