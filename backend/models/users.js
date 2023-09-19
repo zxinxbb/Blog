@@ -6,17 +6,9 @@ const Schema = mongoose.Schema
 
 // what the data will look like
 
-const blogSchema = new Schema({
+const userSchema = new Schema({
 
-    text: {
-
-        type: String,
-
-        required: true
-
-    },
-
-    date: {
+    username: {
 
         type: String,
 
@@ -24,7 +16,15 @@ const blogSchema = new Schema({
 
     },
 
-    image: {
+    password: {
+
+        type: String,
+
+        required: true
+
+    },
+
+    email: {
 
             type: String,
 
@@ -34,4 +34,4 @@ const blogSchema = new Schema({
 
 })
 
-module.exports = mongoose.model('blog', blogSchema)
+module.exports = mongoose.model('user', userSchema)
