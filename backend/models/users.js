@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
 
- 
-
 // get schema from mongoose object
 
 const Schema = mongoose.Schema
@@ -36,8 +34,4 @@ const blogSchema = new Schema({
 
 })
 
- 
-
 module.exports = mongoose.model('blog', blogSchema)
-
-
