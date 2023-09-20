@@ -1,29 +1,31 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { getUser } from "../api/getUser";
-import { updateUser } from "../api/updateUser";
-import './EditUser.css';
+import { getUsers } from "../api/usersApi/getUsers";
+import { editUser} from "../api/usersApi/editUser"
+// import './EditUser.css';
 
 const EditUser = () => {
     const { id } = useParams();
     const [useUpdate, setUseUpdate] = useState('');
     const [userInput, setUserInput] = useState('');
+    const [userInput2, setUserInput2] = useState('');
+    const [userInput3, setUserInput3] = useState('');
 
     const submitHandler = async () => {
         let obj = {
             _id: useUpdate._id,
             username: userInput,
-            password: userInput,
-            email: userInput
+            password: userInput2,
+            email: userInput3
         };
-        let response = await updateUser(obj);
+        let response = await editUser(obj);
         console.log(response);
         alert('edited item');
     };
 
     useEffect(() => {
         const fetchUser = async () => {
-            let data = await getUser(id);
+            let data = await getUsers(id);
             setUseUpdate(data);
         };
         fetchUser();
@@ -31,12 +33,27 @@ const EditUser = () => {
 
     return (
           <div>
-          <h1 className="title">Edit</h1>
+          <h1>Edit</h1>
           <h2>{useUpdate.text}</h2>
+          <h2>username</h2>
           <input
             className="input-field"
             onChange={(e) => setUserInput(e.target.value)}
             value={userInput}
+          />
+          <br></br>
+          <h2>password</h2>
+                    <input
+            className="input-field"
+            onChange={(e) => setUserInput2(e.target.value)}
+            value={userInput2}
+          />
+          <br></br>
+          <h2>email</h2>
+                    <input
+            className="input-field"
+            onChange={(e) => setUserInput3(e.target.value)}
+            value={userInput3}
           />
           <button className="button" onClick={submitHandler}>Submit</button>
           </div>

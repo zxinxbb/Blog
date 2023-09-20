@@ -1,16 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import EditUser from './pages/EditUser';
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-      <Navbar  />
+      {/* <Navbar  /> */}
         <Routes>
           <Route
             path='/'
-            element={<Homepage />}
+            element={<EditUser />}
           />
-          <Route
+          {/* <Route
           path='/add-blog'
           element={<AddBlog />}
           />
@@ -19,9 +20,9 @@ const App = () => {
           element={<EditBlog />}
           />
            <Route
-          path='/add-user'
+          path='/Add-user'
           element={<Login />}
-          />
+          /> */}
         </Routes>
       </BrowserRouter>
      
