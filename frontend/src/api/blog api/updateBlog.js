@@ -1,8 +1,8 @@
 const API_URL = `http://localhost:4000`
 
-export const updateTodo = async (todo) => {
+export const updateBlog = async (blog) => {
     
-    const response = await fetch(`${API_URL}/todos/items/${todo._id}`, {
+    const response = await fetch(`${API_URL}/blogs/items/${blog._id}`, {
         // what method?
         method: 'PATCH',
         // type of content?
@@ -11,7 +11,10 @@ export const updateTodo = async (todo) => {
         },
         // updated the "text" in your model with the text you sent as parameter 
         body: JSON.stringify({
-            text: todo.text
+            text: blog.text,
+            date: blog.date,
+            image: blog.image
+
     })
     })
     const json = await response.json()
