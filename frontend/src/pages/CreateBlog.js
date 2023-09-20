@@ -1,12 +1,12 @@
 import { useState } from "react"
-import { createUser } from "../api/createUser"
+import { addBlog } from "../api/addBlog"
 
-const CreateUser = () => {
+const AddBlog = () => {
     const [userInput, setUserInput] = useState("")
     
     const handler = async (e) => {
         e.preventDefault()
-        let response = await createUser(userInput)
+        let response = await addBlog(userInput)
         console.log(response) 
     }
 
@@ -25,4 +25,4 @@ const CreateUser = () => {
     )
 }
 
-export default CreateUser
+export default CreateBlog
