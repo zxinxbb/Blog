@@ -20,5 +20,3 @@ export const createUser = async (user) => {
     const json = await response.json()
     return json
 }
-
-export default createUser
