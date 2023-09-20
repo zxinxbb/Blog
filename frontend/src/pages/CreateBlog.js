@@ -25,6 +25,6 @@ const AddBlog = () => {
     )
 }
 
-export default CreateBlog
+export default AddBlog
 
 //g
