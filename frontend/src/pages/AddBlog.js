@@ -12,7 +12,7 @@ const AddBlog = () => {
 
     return (
         <div>
-            <h1>Create User</h1>
+            <h1>Add Blog</h1>
             <form onSubmit={handler}>
                 <input
                 type="text"
@@ -26,5 +26,3 @@ const AddBlog = () => {
 }
 
 export default AddBlog
-
-//g

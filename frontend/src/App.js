@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
-import AddBlog from './pages/CreateBlog';
+import AddBlog from './pages/AddBlog';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
 
@@ -25,8 +25,8 @@ const App = () => {
           />
            {/* <Route
           path='/add-user'
-          element={<Login />}
-          /> */
+          element={<AddUser />}
+          /> */}
         </Routes>
       </BrowserRouter>
      
