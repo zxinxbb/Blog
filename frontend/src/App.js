@@ -2,12 +2,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import AddBlog from './pages/CreateBlog';
 import EditBlog from './pages/EditBlog';
+import Navbar from './components/Navbar';
+
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-    {/*   <Navbar  /> */}
+      <Navbar  />
         <Routes>
           <Route
             path='/'
@@ -24,7 +26,7 @@ const App = () => {
            {/* <Route
           path='/add-user'
           element={<Login />}
-          /> */}
+          /> */
         </Routes>
       </BrowserRouter>
      
