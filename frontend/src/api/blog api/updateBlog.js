@@ -12,7 +12,6 @@ export const updateBlog = async (blog) => {
         // updated the "text" in your model with the text you sent as parameter 
         body: JSON.stringify({
             text: blog.text,
-            date: blog.date,
             image: blog.image
 
     })
