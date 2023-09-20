@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import AddBlog from './pages/CreateBlog';
+import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
 
 
@@ -14,7 +15,7 @@ const App = () => {
             path='/'
             element={<Homepage />}
           />
-         /*  <Route
+          <Route
           path='/add-blog'
           element={<AddBlog />}
           />
@@ -22,7 +23,7 @@ const App = () => {
           path='/:id'
           element={<EditBlog />}
           />
-           <Route
+           {/* <Route
           path='/add-user'
           element={<Login />}
           /> */

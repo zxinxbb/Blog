@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { addBlog } from "../api/addBlog"
+import { addBlog } from "../api/blog api/addBlog"
 
 const AddBlog = () => {
     const [userInput, setUserInput] = useState("")
