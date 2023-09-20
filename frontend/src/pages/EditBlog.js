@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { readBlogs } from "../api/blogApi/readBlogs";
-import { updateBlog } from "../api/blogapi/updateBlog"
+import { readBlogs } from "../api/blog api/readBlogs";
+import { updateBlog } from "../api/blog api/updateBlog"
 // import './EditBlog.css';
 
 const EditBlog = () => {
