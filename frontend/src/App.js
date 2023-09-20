@@ -1,17 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Homepage from './pages/Homepage';
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-    {/*   <Navbar  /> */}
+      <Navbar  />
         <Routes>
           <Route
             path='/'
             element={<Homepage />}
           />
-         {/*  <Route
+          <Route
           path='/add-blog'
           element={<AddBlog />}
           />
@@ -22,7 +21,7 @@ const App = () => {
            <Route
           path='/add-user'
           element={<Login />}
-          /> */}
+          />
         </Routes>
       </BrowserRouter>
      
