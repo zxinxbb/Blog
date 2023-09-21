@@ -26,6 +26,7 @@ const createUser = async (req, res) => {
     const { username, password, email } = req.body
     // create new todo object with model
 const userObj = new User({
+    
     username,
     password,
     email
