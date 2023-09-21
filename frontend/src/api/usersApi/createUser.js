@@ -1,11 +1,9 @@
 const API_URL = `http://localhost:4000`
 
-export const createUser = async (user) => {
+ export const createUser = async (createUser) => {
     // pass paramter to function
     // create new object with 'text' key (depending on your Model)
-    let obj = { username:todo,
-                password:todo,
-                email:todo 
+    let obj = { text: createUser 
     }
     const response = await fetch(`${API_URL}/users/item`, {
         // method type?
