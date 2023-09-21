@@ -10,6 +10,8 @@ const Navbar = () => {
                     <Link   style={{textDecoration: 'none'}}to='/add-blog'>
                         Add Blog
                     </Link>
+                    <Link style={{textDecoration: "none"}}to="/add-user">Create Account</Link>
+
                 </div>
             </header>
         </div>
