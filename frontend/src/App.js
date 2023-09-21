@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import CreateBlog from './pages/CreateBlog';
+// import CreateUser from './pages/CreateUser';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
 
@@ -23,10 +24,10 @@ const App = () => {
           path='/:id'
           element={<EditBlog />}
           />
-           /* <Route
+            {/* <Route
           path='/add-user'
-          element={<CreateBlog />}
-          /> */ 
+          element={<CreateUser />}
+          />  */}
         </Routes>
       </BrowserRouter>
      
