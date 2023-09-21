@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { addBlog } from "../api/blog api/addBlog"
 
-const AddBlog = () => {
+const CreateBlog = () => {
     const [userInput, setUserInput] = useState({
         title:"",
         text:"",
@@ -59,6 +59,5 @@ const AddBlog = () => {
     )
 }
 
-export default AddBlog
+export default CreateBlog
 
-//g
