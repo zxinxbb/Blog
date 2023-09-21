@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { addBlog } from "../api/blog api/addBlog"
 
-const AddBlog = () => {
+const CreateBlog = () => {
     const [userInput, setUserInput] = useState({
         title:"",
         text:"",
@@ -26,36 +26,38 @@ const AddBlog = () => {
       console.log(response);
 
     }
+
     return (
-        <div className="container">
+        <div>
             <h1>Add Blog</h1>
             <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                name="title"
+                 value={userInput.title}
+                 onChange={handler}
+                 placeholder="Blog Title"
+                 />
                 <input
-                    type="text"
-                    name="title"
-                    value={userInput.title}
-                    onChange={handler}
-                    placeholder="Blog Title"
-                />
-                <input
-                    type="text"
-                    name="text"
-                    value={userInput.text}
-                    onChange={handler}
-                    placeholder="Blog Text"
-                />
-                <input
-                    type="text"
-                    name="image"
-                    value={userInput.image}
-                    onChange={handler}
-                    placeholder="Image URL"
-                />
-                <button type="submit">Submit</button>
+                type="text"
+                name="text"
+                 value={userInput.text}
+                 onChange={handler}
+                 placeholder="Blog Text"
+                 />
+                 
+                  <input
+                type="text"
+                name="image"
+                 value={userInput.image}
+                 onChange={handler}
+                 placeholder="Image URL"
+                 />
+                 <button type="submit">Submit</button>
             </form>
         </div>
     )
 }
 
-export default AddBlog;
-    
+export default CreateBlog
+

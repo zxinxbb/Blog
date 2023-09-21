@@ -57,6 +57,7 @@ const EditBlog = () => {
                         onChange={(e) => setUserInput(e.target.value)}
                         value={userInput}
                     />
+                    <br></br>
                 </div>
             )}
 

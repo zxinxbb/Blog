@@ -2,6 +2,7 @@ require("dotenv").config()
 
 const express = require('express')
 const itemRoutes = require('./routes/items')
+const itemRoutes2 = require(`./routes/items2`)
 const mongoose = require('mongoose')
 const cors = require('cors')
 
@@ -10,7 +11,8 @@ app.use(cors())
 app.use(express.json()) // parse incomming data
 // routes for requests will always now have '/todos'
 // eg http://localhost:4000/todos/items
-app.use('/todos', itemRoutes)
+app.use('/blogs', itemRoutes)
+app.use('/users', itemRoutes2)
 
 
 mongoose.connect(process.env.MONGODB_URL)
@@ -25,4 +27,5 @@ mongoose.connect(process.env.MONGODB_URL)
 })
 // LISTEN ON PORT 4000
 // frontend is running on port 3000
+
 

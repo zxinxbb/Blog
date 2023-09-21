@@ -27,6 +27,7 @@ const Homepage = () => {
     return (
         <div className="container">
         <h1>Homepage</h1>
+        
         <div className="items">
             <>
                 {
@@ -34,8 +35,8 @@ const Homepage = () => {
                         : <p>loading...</p>
                 }
             </>
-        </div>
-        </div>
+            </div>
+            </div>
     );
 
 }

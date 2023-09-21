@@ -1,15 +1,14 @@
 const mongoose = require('mongoose')
 
- 
-
 // get schema from mongoose object
 
 const Schema = mongoose.Schema
 
 // what the data will look like
 
-const blogSchema = new Schema({
-    title: {
+const userSchema = new Schema({
+
+    username: {
 
         type: String,
 
@@ -17,8 +16,7 @@ const blogSchema = new Schema({
 
     },
 
-
-    text: {
+    password: {
 
         type: String,
 
@@ -26,27 +24,14 @@ const blogSchema = new Schema({
 
     },
 
-    date: {
-
-        type: Date,
-        default:Date.now
-
-        
-
-    },
-
-    image: {
+    email: {
 
             type: String,
 
-            required: false
+            required: true
 
     }
 
 })
 
- 
-
-module.exports = mongoose.model('blog', blogSchema)
-
-
+module.exports = mongoose.model('user', userSchema)
