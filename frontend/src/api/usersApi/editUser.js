@@ -1,26 +1,21 @@
 const API_URL = `http://localhost:4000`
 
-export const editUser = async (user) => {
+export const updateBlog = async (blog) => {
     
-    const response = await fetch(`${API_URL}/users/item/${user._id}`, {
+    const response = await fetch(`${API_URL}/blogs/item/${blog._id}`, {
         // what method?
-        method:'PATCH',
-
-      
+        method: 'PATCH',
         // type of content?
         headers: {
             'Content-Type': 'application/json'
         },
-        // body updated the "text" in your model with the text you sent as parameter 
-        body: JSON.stringify(
-            {
-                username:user.text,
-                password:user.text,
-                email:user.text
+        // updated the "text" in your model with the text you sent as parameter 
+        body: JSON.stringify({
+            title: blog.title,
+            text: blog.text,
+            image: blog.image
 
-
-            }
-        )
+    })
     })
     const json = await response.json()
     return json

@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
-import AddBlog from './pages/CreateBlog';
+import CreateBlog from './pages/CreateBlog';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
+import CreateUser from "./pages/CreateUser"
 
 
 const App = () => {
@@ -17,16 +18,16 @@ const App = () => {
           />
          <Route
           path='/add-blog'
-          element={<AddBlog />}
+          element={<CreateBlog />}
           />
            <Route
           path='/:id'
           element={<EditBlog />}
           />
-           /* <Route
+           <Route
           path='/add-user'
-          element={<AddBlog />}
-          /> */ 
+          element={<CreateUser />}
+          />
         </Routes>
       </BrowserRouter>
      
