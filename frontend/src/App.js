@@ -15,7 +15,7 @@ const App = () => {
             path='/'
             element={<Homepage />}
           />
-          <Route
+         <Route
           path='/add-blog'
           element={<AddBlog />}
           />
@@ -23,10 +23,10 @@ const App = () => {
           path='/:id'
           element={<EditBlog />}
           />
-           {/* <Route
+           /* <Route
           path='/add-user'
-          element={<Login />}
-          /> */
+          element={<AddBlog />}
+          /> */ 
         </Routes>
       </BrowserRouter>
      

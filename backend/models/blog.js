@@ -9,6 +9,14 @@ const Schema = mongoose.Schema
 // what the data will look like
 
 const blogSchema = new Schema({
+    title: {
+
+        type: String,
+
+        required: true
+
+    },
+
 
     text: {
 
