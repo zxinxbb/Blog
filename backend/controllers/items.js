@@ -23,12 +23,13 @@ const getBlog = async (req, res) => {
 
 const createBlog = async (req, res) => {
     // get the text from the req.body
-    const { text, date, image } = req.body
+    const {title, text, /* date, */ image } = req.body
     console.log(text)
     // create new todo object with model
 const blogObj = new Blog({
+    title,
     text,
-    date,
+   /*  date, */
     image
 })
     // await for it to be saved
@@ -41,7 +42,7 @@ const editBlog = async (req, res) => {
     // get id from ':id' param from the route
     const { id } = req.params
     // use mongoose model method findByIdAndUpdate
-    let blog = await Blog.findByIdAndUpdate(id, { text: req.body.text, image: req.body.image })
+    let blog = await Blog.findByIdAndUpdate(id, { title: req.body.title, text: req.body.text, image: req.body.image })
 
     res.status(200).json(blog)
 }

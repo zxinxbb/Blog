@@ -1,9 +1,10 @@
 const API_URL = `http://localhost:4000`
 
-export const addBlog = async (blog) => {
-    
-    let obj = { title: blog.title, text: blog.text , /* date: blog.date , */ image: blog.image}
-    const response = await fetch(`${API_URL}/blogs/item`, {
+export const addTodo = async (todo) => {
+    // pass paramter to function
+    // create new object with 'text' key (depending on your Model)
+    let obj = { text: todo }
+    const response = await fetch(`${API_URL}/todos/item`, {
         // method type?
         method: 'POST',
         // sending body, stringify data
