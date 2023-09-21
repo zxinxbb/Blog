@@ -13,8 +13,11 @@ const EditBlog = () => {
     const submitHandler = async () => {
         let obj = {
             _id: blogUpdate._id,
-            text: userInput,
-
+            title:"test",
+            text:userInput,
+            date:"test",
+            image:"test"
+            
         };
         let response = await updateBlog(obj);
         console.log(response);
