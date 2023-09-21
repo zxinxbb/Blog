@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { getBlog } from "../api/blog api/getBlog";
+import { readBlogs } from "../api/blog api/readBlogs";
 import { updateBlog } from "../api/blog api/updateBlog"
 // import './EditBlog.css';
 
@@ -23,7 +23,7 @@ const EditBlog = () => {
 
     useEffect(() => {
         const fetchBlog = async () => {
-            let data = await getBlog(id);
+            let data = await readBlogs(id);
             setBlogUpdate(data);
         };
         fetchBlog();
@@ -31,12 +31,12 @@ const EditBlog = () => {
 
     return (
           <div>
-          <h1>Edit Blog</h1>
+          <h1>Edit</h1>
           <h2>{blogUpdate.text}</h2>
           <input
             className="input-field"
             onChange={(e) => setUserInput(e.target.value)}
-            value={userInput}
+            value={blogUpdate}
           />
 
           <button className="button" onClick={submitHandler}>Submit</button>
