@@ -11,6 +11,7 @@ const Navbar = () => {
                         Add Blog
                     </Link>
                     <Link style={{textDecoration: "none"}}to="/add-user">Create Account</Link>
+
                 </div>
             </header>
         </div>
