@@ -2,7 +2,7 @@ const API_URL = `http://localhost:4000`
 
 export const updateBlog = async (blog) => {
     
-    const response = await fetch(`${API_URL}/blogs/items/${blog._id}`, {
+    const response = await fetch(`${API_URL}/blogs/item/${blog._id}`, {
         // what method?
         method: 'PATCH',
         // type of content?
