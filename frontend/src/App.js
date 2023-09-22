@@ -5,12 +5,13 @@ import CreateBlog from './pages/CreateBlog';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
 import CreateUser from "./pages/CreateUser"
+import Auth0ProviderWithHistory from './auth0Provider';
 
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
+    <BrowserRouter>
+    <Auth0ProviderWithHistory>
       <Navbar  />
         <Routes>
           <Route
@@ -30,9 +31,8 @@ const App = () => {
           element={<CreateUser />}
           />
         </Routes>
-      </BrowserRouter>
-     
-    </div>
+        </Auth0ProviderWithHistory>
+        </BrowserRouter>
   );
   }
 
