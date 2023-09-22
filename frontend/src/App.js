@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import CreateBlog from './pages/CreateBlog';
+// import CreateUser from './pages/CreateUser';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
 import CreateUser from "./pages/CreateUser"
