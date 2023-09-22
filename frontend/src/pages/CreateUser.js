@@ -3,9 +3,9 @@ import { createUser } from "../api/usersApi/createUser"
 
 const CreateUser = () => {
     const [userInput, setUserInput] = useState({
-        firstName:"",
+        firstname:"",
         surname:"",
-        emailAddress:"",
+        email:"",
         username:"",
         password:""
     })
@@ -35,40 +35,40 @@ const CreateUser = () => {
                 <h2>First Name</h2>
             <input
                 type="text"
-                name="First Name"
-                 value={userInput.text}
+                name="firstname"
+                 value={userInput.firstname}
                  onChange={handler}
                  placeholder="First Name"
                  />
                  <h2>Surname</h2>
                 <input
                 type="text"
-                name="Surname"
-                 value={userInput.text}
+                name="surname"
+                 value={userInput.surname}
                  onChange={handler}
                  placeholder="Surname"
                  />
                  <h2>Email Address</h2>
                   <input
                 type="text"
-                name="Email Address"
-                 value={userInput.text}
+                name="email"
+                 value={userInput.email}
                  onChange={handler}
                  placeholder="Email Address"
                  />
                  <h2>Create a Username</h2>
                   <input
                 type="text"
-                name="Create a Username"
-                 value={userInput.text}
+                name="username"
+                 value={userInput.username}
                  onChange={handler}
                  placeholder="Type your Username in here"
                  />
                  <h2>Create a Password</h2>
                  <input
                 type="text"
-                name="Create a Password"
-                 value={userInput.text}
+                name="password"
+                 value={userInput.password}
                  onChange={handler}
                  placeholder="Type your Password in here"
                  />

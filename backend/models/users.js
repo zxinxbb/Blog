@@ -7,7 +7,28 @@ const Schema = mongoose.Schema
 // what the data will look like
 
 const userSchema = new Schema({
+    firstname: {
 
+        type: String,
+
+        required: true
+
+    },
+    surname: {
+
+        type: String,
+
+        required: true
+
+    },
+
+    email: {
+
+            type: String,
+
+            required: true
+
+    },
     username: {
 
         type: String,
@@ -21,14 +42,6 @@ const userSchema = new Schema({
         type: String,
 
         required: true
-
-    },
-
-    email: {
-
-            type: String,
-
-            required: true
 
     }
 
