@@ -18,14 +18,14 @@ const Navbar = () => {
                 </div>
                 {!isLoading && !user && (
                     <button
-                    onClick={() => loginWithRedirect}
+                    onClick={() => loginWithRedirect()}
                     >
                     log in
                     </button>
     )}
-                    {!isLoading && user && (
+                    {!isLoading && !user && (
                     <button
-                    onClick={() => logout}
+                    onClick={() => logout()}
                     >
                     log out
                     </button>
