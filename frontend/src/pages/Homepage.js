@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { readBlogs } from "../api/blog api/readBlogs";
 import Card from '../components/Card'
 import { deleteBlog } from "../api/blog api/deleteBlog";
+import { useAuth0 } from '@auth0/auth0-react'
 const Homepage = () => {
     const [blogs, setBlogs] = useState([ ])
-
+    const {user} = useAuth0()
+    console.log(user.email)
 
     const deleteHandler = async (blog) => {
         let response = await deleteBlog(blog)
