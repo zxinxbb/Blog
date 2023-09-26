@@ -23,13 +23,15 @@ const getUser = async (req, res) => {
 
 const createUser = async (req, res) => {
     // get the text from the req.body
-    const { username, password, email } = req.body
+    const { firstname, surname, email, username, password } = req.body
     // create new todo object with model
 const userObj = new User({
-    
+    firstname,
+    surname,
+    email,
     username,
     password,
-    email
+    
 })
     // await for it to be saved
     const newUser = await userObj.save()
