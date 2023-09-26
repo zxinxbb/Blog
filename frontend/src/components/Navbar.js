@@ -1,8 +1,10 @@
 import { useAuth0 } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom'
-const Navbar = () => {
-    const {loginWithRedirect,logout, user, isLoading} = useAuth0()
 
+const Navbar = () => {
+    
+    const {loginWithRedirect,logout, user, isLoading,} = useAuth0()
+console.log(user)
     return (
         <div>
             <header>
@@ -23,7 +25,7 @@ const Navbar = () => {
                     log in
                     </button>
     )}
-                    {!isLoading && !user && (
+                    {!isLoading && user && (
                     <button
                     onClick={() => logout()}
                     >

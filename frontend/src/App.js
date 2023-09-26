@@ -5,10 +5,13 @@ import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
 import CreateUser from './pages/CreateUser';
 import Auth0ProviderWithHistory from './auth0Provider';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 const App = () => {
   return (
+    <Auth0Provider>
     <BrowserRouter>
+
       <Auth0ProviderWithHistory>
         <Navbar />
         <Routes>
@@ -31,6 +34,7 @@ const App = () => {
         </Routes>
       </Auth0ProviderWithHistory>
     </BrowserRouter>
+    </Auth0Provider>
   );
 }
 
