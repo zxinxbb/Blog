@@ -8,15 +8,15 @@ const Auth0ProviderWithHistory = ({ children }) => {
 
   const history = useNavigate();
 
-  const onRedirectCallback = (appState) => {
-    history.push(appState?.returnTo || window.location.pathname);
+  const onRedirectCallback = () => {
+    history('/'); // Always redirect to http://localhost:3000
   };
 
   return (
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={window.location.origin}
+      redirectUri="http://localhost:3000" // Set the fixed redirect URI
       onRedirectCallback={onRedirectCallback}
     >
       {children}
