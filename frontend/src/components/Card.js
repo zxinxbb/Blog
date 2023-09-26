@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Card = ({ blog, deleteHandler }) => {
  
   const newDate = blog.date.substring(0, 10);
-
+//if user.email == blogEmail
   return (
     <div>
       <h3>{blog.title}</h3>
@@ -13,6 +13,11 @@ const Card = ({ blog, deleteHandler }) => {
       <button onClick={() => deleteHandler(blog)}>Delete</button>
       <Link to={`/${blog._id}`}>Edit Blog</Link>
     </div>
+    // else     <div>
+    //   <h3>{blog.title}</h3>
+    //   <p>{blog.text}</p>
+    //   <img src={blog.image} alt={blog.title} width="25%" />
+    //   <footer>{newDate}</footer> 
   );
 };
 
