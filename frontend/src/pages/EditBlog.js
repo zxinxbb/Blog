@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from 'react';
-import { getBlog } from "../api/blog api/getBlog";
+import { useParams } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { getBlog } from "../api/blog api/getBlog"
 import { updateBlog } from "../api/blog api/updateBlog"
 
 const EditBlog = () => {
@@ -21,21 +21,45 @@ const EditBlog = () => {
 
     useEffect(() => {
         const fetchBlog = async () => {
-            let data = await getBlog(id);
-            setBlogUpdate(data);
-        };
-        fetchBlog();
-    },[]);
+            let data = await getBlog(id)
+            setBlogUpdate(data)
+            
+            
+            if (selectedField) {
+                setOriginal(data[selectedField])
+            }
+        }
+        fetchBlog()
+    }, [id, selectedField]) 
+
+    
+    useEffect(() => {
+        if (selectedField) {
+            setOriginal(blogUpdate[selectedField])
+        }
+    }, [selectedField, blogUpdate])
 
     return (
-          <div>
-          <h1>Edit Blog</h1>
-          <h2>{blogUpdate.text}</h2>
-          <input
-            className="input-field"
-            onChange={(e) => setUserInput(e.target.value)}
-            value={userInput}
-          />
+        <div className="container">
+            <h1 className="edit-blog-title">Edit Blog</h1>
+            <h2 className="edit-blog-original">{original}</h2>
+
+            <select className="edit-blog-select" onChange={(e) => setSelectedField(e.target.value)}>
+                <option value="">Select Field to Edit</option>
+                <option value="title">Title</option>
+                <option value="text">Text</option>
+                <option value="image">Image</option>
+            </select>
+            {selectedField && (
+                <div className="edit-blog-input-container">
+                    <input
+                        className="input-field"
+                        onChange={(e) => setUserInput(e.target.value)}
+                        value={userInput}
+                    />
+                    <br></br>
+                </div>
+            )}
 
             <button className="button" onClick={submitHandler}>Submit</button>
         </div>
