@@ -4,14 +4,17 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 const CreateBlog = () => {
     const {user} = useAuth0()
+    console.log(user)
     const userEmail = user.email
+    const userName = user.nickname
     console.log(userEmail)
     const [userInput, setUserInput] = useState({
         title:"",
         text:"",
         date:"",
         image:"",
-        email:userEmail
+        email:userEmail,
+        username:userName
     })
     
     const handler = async (e) => {
@@ -48,8 +51,8 @@ const CreateBlog = () => {
                  value={userInput.text}
                  onChange={handler}
                  placeholder="Blog Text"
-                 />             
-                  <input
+                 />
+                <input
                 type="text"
                 name="image"
                  value={userInput.image}
