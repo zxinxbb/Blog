@@ -2,7 +2,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-    const { loginWithRedirect, logout, user, isLoading } = useAuth0();
+    const { loginWithRedirect, logout, user, isLoading } = useAuth0()
 
     return (
         <div>
@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
             </header>
         </div>
-    );
+    )
 }
 
-export default Navbar;
+export default Navbar
