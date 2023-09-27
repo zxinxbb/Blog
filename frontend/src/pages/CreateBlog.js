@@ -51,8 +51,8 @@ const CreateBlog = () => {
                  value={userInput.text}
                  onChange={handler}
                  placeholder="Blog Text"
-                 />             
-                  <input
+                 />
+                <input
                 type="text"
                 name="image"
                  value={userInput.image}
