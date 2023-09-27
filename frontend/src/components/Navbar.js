@@ -14,10 +14,8 @@ const Navbar = () => {
                     <Link   style={{textDecoration: 'none'}}to='/add-blog'>
                         Add Blog
                     </Link>
-                    <Link style={{textDecoration: "none"}}to="/add-user">Create Account</Link>
 
-                </div>
-                {!isLoading && !user && (
+                    {!isLoading && !user && (
                     <button
                     onClick={() => loginWithRedirect()}
                     >
@@ -31,6 +29,7 @@ const Navbar = () => {
                     log out
                     </button>
     )}
+                </div>
             </header>
         </div>
     )
