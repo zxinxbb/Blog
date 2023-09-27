@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     
     const {loginWithRedirect,logout, user, isLoading,} = useAuth0()
-console.log(user)
     return (
         <div>
             <header>

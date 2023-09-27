@@ -1,12 +1,17 @@
 import { useState } from "react"
 import { addBlog } from "../api/blog api/addBlog"
+import { useAuth0 } from '@auth0/auth0-react'
 
 const CreateBlog = () => {
+    const {user} = useAuth0()
+    const userEmail = user.email
+    console.log(userEmail)
     const [userInput, setUserInput] = useState({
         title:"",
         text:"",
         date:"",
-        image:""
+        image:"",
+        email:userEmail
     })
     
     const handler = async (e) => {
@@ -24,7 +29,6 @@ const CreateBlog = () => {
         e.preventDefault()
         const response = await addBlog(userInput);
       console.log(response);
-
     }
 
     return (
@@ -44,8 +48,7 @@ const CreateBlog = () => {
                  value={userInput.text}
                  onChange={handler}
                  placeholder="Blog Text"
-                 />
-                 
+                 />             
                   <input
                 type="text"
                 name="image"
@@ -60,4 +63,3 @@ const CreateBlog = () => {
 }
 
 export default CreateBlog
-
