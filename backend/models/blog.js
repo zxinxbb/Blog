@@ -47,7 +47,7 @@ const blogSchema = new Schema({
 
         type: String,
 
-        required: false
+        required: true
 
     }
 

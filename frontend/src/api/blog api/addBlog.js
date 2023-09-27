@@ -3,7 +3,7 @@ const API_URL = `http://localhost:4000`
 
 export const addBlog = async (blog) => {
 
-    let obj = { title: blog.title, text: blog.text , /* date: blog.date , */ image: blog.image,email:blog.email}
+    let obj = { title: blog.title, text: blog.text , /* date: blog.date , */ image: blog.image,email: blog.email}
     const response = await fetch(`${API_URL}/blogs/item`, {
         // method type?
         method: 'POST',

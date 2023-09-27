@@ -23,14 +23,15 @@ const getBlog = async (req, res) => {
 
 const createBlog = async (req, res) => {
     // get the text from the req.body
-    const {title, text, /* date, */ image } = req.body
+    const {title, text, /* date, */ image, email } = req.body
     console.log(text)
     // create new todo object with model
 const blogObj = new Blog({
     title,
     text,
    /*  date, */
-    image
+    image,
+    email
 })
     // await for it to be saved
     const newBlog = await blogObj.save()
