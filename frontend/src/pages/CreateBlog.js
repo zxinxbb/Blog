@@ -14,7 +14,7 @@ const CreateBlog = () => {
         date:"",
         image:"",
         email:userEmail,
-        username:"Posted by" + userName
+        username:"Posted by " + userName
     })
     
     const handler = async (e) => {
@@ -35,10 +35,11 @@ const CreateBlog = () => {
     }
 
     return (
-        <div>
-            <h1>Add Blog</h1>
-            <form onSubmit={handleSubmit}>
+        <div className="container">
+            <h1 style={{ margin: '0px 50' }}>Add Blog</h1>
+            <form className="form" onSubmit={handleSubmit}>
             <input
+                className="big-input"
                 type="text"
                 name="title"
                  value={userInput.title}
@@ -46,6 +47,7 @@ const CreateBlog = () => {
                  placeholder="Blog Title"
                  />
                 <input
+                className="textarea"
                 type="text"
                 name="text"
                  value={userInput.text}
@@ -53,13 +55,14 @@ const CreateBlog = () => {
                  placeholder="Blog Text"
                  />
                 <input
+                className="big-input"
                 type="text"
                 name="image"
                  value={userInput.image}
                  onChange={handler}
                  placeholder="Image URL"
                  />
-                 <button type="submit">Submit</button>
+                 <button className="button" type="submit">Submit</button>
             </form>
         </div>
     )

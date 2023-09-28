@@ -7,12 +7,12 @@ const Navbar = () => {
     return (
         <div>
             <header>
-                <div>
-                    <Link style={{ textDecoration: 'none' }} to='/'>
+            <div className="navbar">
+                    <Link className="nav-link" to='/'>
                         Homepage
                     </Link>
                     {user && (
-                        <Link style={{ textDecoration: 'none' }} to='/add-blog'>
+                        <Link className="nav-link" to='/add-blog'>
                             Add Blog
                         </Link>
                     )}

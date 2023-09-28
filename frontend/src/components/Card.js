@@ -9,16 +9,17 @@ const Card = ({ blog, deleteHandler }) => {
   const isUserBlog = isAuthenticated && blog.email === user.email
 
   return (
-    <div>
+    <div className="card">
       <h3>{blog.title}</h3>
       <p>{blog.text}</p>
       <img src={blog.image} alt={blog.title} width="25%" />
+      <div className="app-footer">
       <footer>{newDate} {blog.username}</footer>
-
+      </div>
       {isUserBlog && ( 
         <>
-          <button onClick={() => deleteHandler(blog)}>Delete</button>
-          <Link to={`/${blog._id}`}>Edit Blog</Link>
+          <button className="delete-btn" onClick={() => deleteHandler(blog)}>Delete</button>
+          <Link className="edit-btn" to={`/${blog._id}`}>Edit Blog</Link>
         </>
       )}
     </div>

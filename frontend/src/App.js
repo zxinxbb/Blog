@@ -5,6 +5,7 @@ import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
 import Auth0ProviderWithHistory from './auth0Provider';
 import { Auth0Provider } from '@auth0/auth0-react';
+import './css/main.css'
 
 const App = () => {
   return (
