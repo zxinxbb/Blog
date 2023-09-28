@@ -1,12 +1,20 @@
 import { useState } from "react"
 import { addBlog } from "../api/blog api/addBlog"
+import { useAuth0 } from '@auth0/auth0-react'
 
 const CreateBlog = () => {
+    const {user} = useAuth0()
+    console.log(user)
+    const userEmail = user.email
+    const userName = user.nickname
+    console.log(userEmail)
     const [userInput, setUserInput] = useState({
         title:"",
         text:"",
         date:"",
-        image:""
+        image:"",
+        email:userEmail,
+        username:"Posted by" + userName
     })
     
     const handler = async (e) => {
@@ -24,7 +32,6 @@ const CreateBlog = () => {
         e.preventDefault()
         const response = await addBlog(userInput);
       console.log(response);
-
     }
 
 
@@ -48,6 +55,7 @@ const CreateBlog = () => {
                     placeholder="Blog Text"
                 />
                 <input
+
                     className="big-input" /* Applying the big-input class for a larger image URL input box */
                     type="text"
                     name="image"
@@ -56,9 +64,27 @@ const CreateBlog = () => {
                     placeholder="Image URL"
                 />
                 <button className="button" type="submit">Submit</button>
+
+                className="big-input"
+                type="text"
+                name="text"
+                 value={userInput.text}
+                 onChange={handler}
+                 placeholder="Blog Text"
+                 />
+                <input
+                type="text"
+                name="image"
+                 value={userInput.image}
+                 onChange={handler}
+                 placeholder="Image URL"
+                 />
+                 <button type="submit">Submit</button>
+
             </form>
         </div>
     );
 }
+
 
 export default CreateBlog;

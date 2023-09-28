@@ -3,37 +3,41 @@ import Homepage from './pages/Homepage';
 import CreateBlog from './pages/CreateBlog';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
+
 import CreateUser from "./pages/CreateUser"
 import './css/main.css'
 
 
+import Auth0ProviderWithHistory from './auth0Provider';
+import { Auth0Provider } from '@auth0/auth0-react';
+
+
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-      <Navbar  />
+    <Auth0Provider>
+    <BrowserRouter>
+
+      <Auth0ProviderWithHistory>
+        <Navbar />
         <Routes>
           <Route
-            path='/'
+            path="/"
             element={<Homepage />}
           />
-         <Route
-          path='/add-blog'
-          element={<CreateBlog />}
+          <Route
+            path="/add-blog"
+            element={<CreateBlog />}
           />
-           <Route
-          path='/:id'
-          element={<EditBlog />}
+          <Route
+            path="/:id"
+            element={<EditBlog />}
           />
-           <Route
-          path='/add-user'
-          element={<CreateUser />}
-          />
+
         </Routes>
-      </BrowserRouter>
-     
-    </div>
+      </Auth0ProviderWithHistory>
+    </BrowserRouter>
+    </Auth0Provider>
   );
-  }
+}
 
 export default App;

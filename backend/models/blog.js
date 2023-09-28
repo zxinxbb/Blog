@@ -41,6 +41,21 @@ const blogSchema = new Schema({
 
             required: false
 
+    },
+
+    email: {
+
+        type: String,
+
+        required: true
+
+    },
+    username: {
+
+        type: String,
+
+        required: true
+
     }
 
 })
@@ -48,5 +63,3 @@ const blogSchema = new Schema({
  
 
 module.exports = mongoose.model('blog', blogSchema)
-
-

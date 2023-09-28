@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { readBlogs } from "../api/blog api/readBlogs";
 import Card from '../components/Card'
 import { deleteBlog } from "../api/blog api/deleteBlog";
+
+
 const Homepage = () => {
     const [blogs, setBlogs] = useState([ ])
-
-
     const deleteHandler = async (blog) => {
         let response = await deleteBlog(blog)
         console.log(response)

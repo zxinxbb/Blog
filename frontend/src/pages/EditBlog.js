@@ -41,7 +41,9 @@ const EditBlog = () => {
 
     return (
         <div className="container">
+
             <h1 id="edit-blog-title">Edit Blog</h1>
+
             <h2 className="edit-blog-original">{original}</h2>
 
             <select className="edit-blog-select" onChange={(e) => setSelectedField(e.target.value)}>
