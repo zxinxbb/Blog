@@ -25,7 +25,9 @@ const Homepage = () => {
  
     if (!blogs) return <h1>loading...</h1>
     return (
-        
+<div id="container">
+        <h1>Homepage</h1>
+        <div id="card-container">
         <div className="items">
             <>
                 {
@@ -33,8 +35,14 @@ const Homepage = () => {
                         : <p>loading...</p>
                 }
             </>
-        </div>
-   
+            </div>
+            </div>
+            <div className="footer">
+                © 2023 Blog Name. All Rights Reserved.
+            </div> 
+
+            </div>
+        
     );
 
 }

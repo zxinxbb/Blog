@@ -3,8 +3,14 @@ import Homepage from './pages/Homepage';
 import CreateBlog from './pages/CreateBlog';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
+
+import CreateUser from "./pages/CreateUser"
+import './css/main.css'
+
+
 import Auth0ProviderWithHistory from './auth0Provider';
 import { Auth0Provider } from '@auth0/auth0-react';
+
 
 const App = () => {
   return (
