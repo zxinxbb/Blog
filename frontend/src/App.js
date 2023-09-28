@@ -3,7 +3,6 @@ import Homepage from './pages/Homepage';
 import CreateBlog from './pages/CreateBlog';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
-import CreateUser from './pages/CreateUser';
 import Auth0ProviderWithHistory from './auth0Provider';
 import { Auth0Provider } from '@auth0/auth0-react';
 
@@ -27,10 +26,7 @@ const App = () => {
             path="/:id"
             element={<EditBlog />}
           />
-          <Route
-            path="/add-user"
-            element={<CreateUser />}
-          />
+
         </Routes>
       </Auth0ProviderWithHistory>
     </BrowserRouter>
