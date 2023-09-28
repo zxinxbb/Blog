@@ -4,6 +4,7 @@ import CreateBlog from './pages/CreateBlog';
 import EditBlog from './pages/EditBlog';
 import Navbar from './components/Navbar';
 import CreateUser from "./pages/CreateUser"
+import './css/main.css'
 
 
 const App = () => {

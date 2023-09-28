@@ -6,13 +6,18 @@ const Card = ({ blog, deleteHandler }) => {
   return (
     <div className="card">
       <h3>{blog.title}</h3>
-      <p>{blog.text}</p>
       <img src={blog.image} alt={blog.title} />
-      <footer>{newDate}</footer>
-      <button onClick={() => deleteHandler(blog)}>Delete</button>
-      <Link to={`/${blog._id}`}>Edit Blog</Link>
+      <p>{blog.text}</p>
+
+      <div className="btn-container">
+        <button className="delete-btn" onClick={() => deleteHandler(blog)}>Delete</button>
+        <Link className="edit-btn" to={`/${blog._id}`}>Edit Blog</Link>
+      </div>
+      <div className="app-footer">
+        <footer>{newDate}</footer>
+      </div>
     </div>
-  );
-};
+  )}
+
 
 export default Card;
