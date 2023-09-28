@@ -14,7 +14,7 @@ const CreateBlog = () => {
         date:"",
         image:"",
         email:userEmail,
-        username:userName
+        username:"Posted by" + userName
     })
     
     const handler = async (e) => {
