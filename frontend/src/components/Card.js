@@ -31,12 +31,13 @@ const Card = ({ blog, deleteHandler }) => {
 
 
       <img src={blog.image} alt={blog.title} width="25%" />
+      <div className="app-footer">
       <footer>{newDate} {blog.username}</footer>
-
+      </div>
       {isUserBlog && ( 
         <>
-          <button onClick={() => deleteHandler(blog)}>Delete</button>
-          <Link to={`/${blog._id}`}>Edit Blog</Link>
+          <button className="delete-btn" onClick={() => deleteHandler(blog)}>Delete</button>
+          <Link className="edit-btn" to={`/${blog._id}`}>Edit Blog</Link>
         </>
       )}
     </div>

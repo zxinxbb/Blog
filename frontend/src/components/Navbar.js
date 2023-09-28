@@ -7,24 +7,12 @@ const Navbar = () => {
     return (
         <div>
             <header>
-
-                <div className="navbar"> {/* Add this className */}
-                    <Link className="nav-link" to='/'> {/* Add this className */}
-                        Homepage
-                    </Link>
-                    <Link className="nav-link" to='/add-blog'> {/* Add this className */}
-                        Add Blog
-                    </Link>
-                    <Link className="nav-link" to="/add-user"> {/* Add this className */}
-                        Create Account
-                    </Link>
-
-                <div>
-                    <Link style={{ textDecoration: 'none' }} to='/'>
+            <div className="navbar">
+                    <Link className="nav-link" to='/'>
                         Homepage
                     </Link>
                     {user && (
-                        <Link style={{ textDecoration: 'none' }} to='/add-blog'>
+                        <Link className="nav-link" to='/add-blog'>
                             Add Blog
                         </Link>
                     )}
@@ -39,11 +27,10 @@ const Navbar = () => {
                             log out
                         </button>
                     )}
-
                 </div>
             </header>
         </div>
     )
 }
 
-export default Navbar;
+export default Navbar

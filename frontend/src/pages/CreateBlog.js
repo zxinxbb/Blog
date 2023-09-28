@@ -14,7 +14,7 @@ const CreateBlog = () => {
         date:"",
         image:"",
         email:userEmail,
-        username:"Posted by" + userName
+        username:"Posted by " + userName
     })
     
     const handler = async (e) => {
@@ -34,38 +34,20 @@ const CreateBlog = () => {
       console.log(response);
     }
 
-
     return (
         <div className="container">
-            <h1 style={{ margin: '0px 50' }}>Add Blog</h1> {/* Inline style to reduce the space */}
+            <h1 style={{ margin: '0px 50' }}>Add Blog</h1>
             <form className="form" onSubmit={handleSubmit}>
-                <input
-                    className="big-input" /* Applying the big-input class for a larger title input box */
-                    type="text"
-                    name="title"
-                    value={userInput.title}
-                    onChange={handler}
-                    placeholder="Blog Title"
-                />
-                <textarea
-                    className="textarea"
-                    name="text"
-                    value={userInput.text}
-                    onChange={handler}
-                    placeholder="Blog Text"
-                />
-                <input
-
-                    className="big-input" /* Applying the big-input class for a larger image URL input box */
-                    type="text"
-                    name="image"
-                    value={userInput.image}
-                    onChange={handler}
-                    placeholder="Image URL"
-                />
-                <button className="button" type="submit">Submit</button>
-
+            <input
                 className="big-input"
+                type="text"
+                name="title"
+                 value={userInput.title}
+                 onChange={handler}
+                 placeholder="Blog Title"
+                 />
+                <input
+                className="textarea"
                 type="text"
                 name="text"
                  value={userInput.text}
@@ -73,18 +55,17 @@ const CreateBlog = () => {
                  placeholder="Blog Text"
                  />
                 <input
+                className="big-input"
                 type="text"
                 name="image"
                  value={userInput.image}
                  onChange={handler}
                  placeholder="Image URL"
                  />
-                 <button type="submit">Submit</button>
-
+                 <button className="button" type="submit">Submit</button>
             </form>
         </div>
-    );
+    )
 }
 
-
-export default CreateBlog;
+export default CreateBlog

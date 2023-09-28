@@ -10,6 +10,7 @@ import './css/main.css'
 
 import Auth0ProviderWithHistory from './auth0Provider';
 import { Auth0Provider } from '@auth0/auth0-react';
+import './css/main.css'
 
 
 const App = () => {
