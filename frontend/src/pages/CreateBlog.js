@@ -2,6 +2,8 @@ import { useState } from "react"
 import { addBlog } from "../api/blog api/addBlog"
 import { useAuth0 } from '@auth0/auth0-react'
 
+
+
 const CreateBlog = () => {
     const {user} = useAuth0()
     console.log(user)
@@ -30,6 +32,7 @@ const CreateBlog = () => {
         e.preventDefault()
         const response = await addBlog(userInput);
       console.log(response);
+
     }
 
     return (
