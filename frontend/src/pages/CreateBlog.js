@@ -24,8 +24,6 @@ const CreateBlog = () => {
       ...userInput,
       [name]: value,
     })
-        /* let response = await addBlog(userInput)
-        console.log(response)  */
     }
 
     const handleSubmit = async (e)=>{
