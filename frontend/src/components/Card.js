@@ -12,7 +12,7 @@ const Card = ({ blog, deleteHandler }) => {
     <div className="card">
       <h3>{blog.title}</h3>
       <p>{blog.text}</p>
-      <img src={blog.image} alt={blog.title} width="25%" />
+      <img src={blog.image} alt={blog.title} width="100%" />
       <footer>{newDate} {blog.username}</footer>
 
       {isUserBlog && ( 
