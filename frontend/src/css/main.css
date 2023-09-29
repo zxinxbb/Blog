@@ -137,13 +137,15 @@ body {
 
 .delete-btn,
 .edit-btn {
-    padding: 2px 2px;
+    padding: 2px 10px;
     font-size: 0.8em;
     color: #faf5f5;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 3px;
     background-color: #101010;
+    margin-right: 10px;
 }
+
 
 .card button:hover,
 .card a:hover {
@@ -342,3 +344,22 @@ select:focus {
 button:active {
     transform: translateY(0);
 }
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: #3498db; 
+    color: #FFFFFF; 
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px; 
+  }
+  
+  .nav-btn:hover {
+    background-color: #2980b9; /* Darker blue color on hover */
+    transform: translateY(-2px);
+  }
+  

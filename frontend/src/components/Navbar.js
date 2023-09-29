@@ -18,12 +18,12 @@ const Navbar = () => {
                     )}
 
                     {!isLoading && !user && (
-                        <button className="nav-link" onClick={() => loginWithRedirect()}>
+                        <button className="nav-btn" onClick={() => loginWithRedirect()}>
                             log in
                         </button>
                     )}
                     {!isLoading && user && (
-                        <button className="nav-link" onClick={() => logout()}>
+                        <button className="nav-btn" onClick={() => logout()}>
                             log out
                         </button>
                     )}
